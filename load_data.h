@@ -46,7 +46,7 @@ public:
 			   suang_unit->date_   = atoi(&buffer[35]) * 10000 +
 									 atoi(&buffer[40]) * 100 +
 									 atoi(&buffer[43]);
-			   suang_unit->Print();
+			   //suang_unit->Print();
 			}
 			
 			in.close();
@@ -60,7 +60,6 @@ public:
 	};
 
 	static std::vector<S_suang*> Suang_;
-	//vector<> Da_;
 };
 
 }
