@@ -9,7 +9,7 @@ namespace hehe
 class Decorator : public Component
 {
 public:
-    Decorator(Component *pComponent) : m_pComponentObj(pComponent) {}
+    Decorator(Component* pComponent) : m_pComponentObj(pComponent) {}
     void Operation()
     {
         if (m_pComponentObj != NULL)
@@ -18,7 +18,7 @@ public:
         }
     }
 protected:
-    Component *m_pComponentObj;
+    Component* m_pComponentObj;
 };
 
 
