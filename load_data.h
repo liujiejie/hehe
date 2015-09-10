@@ -3,6 +3,8 @@
 
 #include <fstream>
 #include <vector>
+#include <string.h>
+#include <stdlib.h>
 
 #include "struct.h"
 #include "file_path.h"
@@ -15,6 +17,11 @@ class LoadData
 public:
     static long LoadSuang()
 	{
+		long size = Suang_.size();
+		if (size != 0)
+		{
+			return size;
+		}
 		S_suang* suang_unit = NULL;
 		char buffer[50];
 		for(int i = 0; i < SUANG_FILE_COUNT; i++)
@@ -23,7 +30,7 @@ public:
 			std::ifstream in(file_path.c_str());
 			if (! in.is_open() )  
 			{
-				std::cout << "Error opening file" << std::endl;
+				std::cout << "Error opening file:" << file_path << std::endl;
 				exit (1); 
 			}
 			
@@ -36,22 +43,23 @@ public:
 			   }
 			   suang_unit = new S_suang;
 			   suang_unit->number_ = atoi(&buffer[0]);
-			   suang_unit->red_[0] = atoi(&buffer[11]);
-			   suang_unit->red_[1] = atoi(&buffer[14]);
-			   suang_unit->red_[2] = atoi(&buffer[17]);
-			   suang_unit->red_[3] = atoi(&buffer[20]);
-			   suang_unit->red_[4] = atoi(&buffer[23]);
-			   suang_unit->red_[5] = atoi(&buffer[26]);
-			   suang_unit->blue_   = atoi(&buffer[29]);
-			   suang_unit->date_   = atoi(&buffer[35]) * 10000 +
-									 atoi(&buffer[40]) * 100 +
-									 atoi(&buffer[43]);
+			   suang_unit->data_[0] = atoi(&buffer[11]);
+			   suang_unit->data_[1] = atoi(&buffer[14]);
+			   suang_unit->data_[2] = atoi(&buffer[17]);
+			   suang_unit->data_[3] = atoi(&buffer[20]);
+			   suang_unit->data_[4] = atoi(&buffer[23]);
+			   suang_unit->data_[5] = atoi(&buffer[26]);
+			   suang_unit->data_[6] = atoi(&buffer[29]);
+			   suang_unit->date_    = atoi(&buffer[35]) * 10000 +
+									  atoi(&buffer[40]) * 100 +
+									  atoi(&buffer[43]);
+				Suang_.push_back(suang_unit);
 			   //suang_unit->Print();
 			}
 			
 			in.close();
 		}
-		return 0;
+		return Suang_.size();
 	};
 	static long LoadDa()
 	{

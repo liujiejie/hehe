@@ -10,7 +10,7 @@ class ConcreteComponent : public Component
 public:
 	void Operation()
 	{
-		std::cout<<"I am no decoratored ConcreteComponent"<<std::endl;
+		std::cout<<"start"<<std::endl;
 	}
 };
 

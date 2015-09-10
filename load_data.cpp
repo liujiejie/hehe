@@ -3,6 +3,6 @@
 namespace hehe
 {
 
-vector<S_suang*> LoadData::Suang_;
+std::vector<S_suang*> LoadData::Suang_;
 
 }

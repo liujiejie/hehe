@@ -9,7 +9,7 @@ namespace hehe
 
 #define SUANG_FILE_COUNT 13
 
-static std::string g_root_dir = "D:\\cygwin\\install\\home\\admin\\";
+static std::string g_root_dir = "D:\\cygwin\\install\\home\\admin\\";//"E:\\soft\\cygwin64\\home\\Administrator\\workspace\\";//"
 static std::string g_da_dir = "./da/";
 static std::string g_suang_name[SUANG_FILE_COUNT] = {
 	"caipiao\\suang\\2003.txt",
