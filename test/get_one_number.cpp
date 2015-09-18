@@ -14,7 +14,8 @@ int SetSrand()
 };
 static int set_srand = SetSrand();
 
-bool AdugeEquel(const int* data, int num, int index)
+template<typename T>
+bool AdugeEquel(const T data, int num, int index)
 {
 	for(int i = 0; i < index; i++)
 	{
@@ -38,7 +39,7 @@ void GetOneShuang(S_suang& data)
 		i++;
 	}
 	data.data_[6] = GetOneNumber(1, 16);
-	std::sort(data.data_ + 0, data.data_ + 6);
+	std::sort(data.data_.begin(), data.data_.begin() + 6);
 }
 
 

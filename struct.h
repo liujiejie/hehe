@@ -29,6 +29,15 @@ struct NumValue
 		<< value_
 		<< "</td></tr>";
 	}
+	void Print()
+	{
+		std::cout.flags(std::ios::right); //右对齐
+		std::cout.width(2);
+		std::cout.fill(' ');
+		std::cout << "\033[32;1m"    << std::setw(2)
+				  << value_ << "  " << std::setw(2)
+				  << "\033[34;1m" << num_ << std::flush;
+	};
 };
 
 inline bool sort_by_distance(const NumValue& obj1, const NumValue& obj2) 
@@ -43,8 +52,9 @@ struct S_suang
 	{
 		date_ = 0;
 		number_ = 0;
+		data_.resize(7);
 	}
-	int data_[7];
+	std::vector<int> data_;
 	int red_[6];
 	int	blue_;
 	int date_;

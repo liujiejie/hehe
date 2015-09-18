@@ -17,11 +17,12 @@ class LoadData
 public:
     static long LoadSuang()
 	{
-		long size = Suang_.size();
+		Suang_.clear();
+/* 		long size = Suang_.size();
 		if (size != 0)
 		{
 			return size;
-		}
+		} */
 		S_suang* suang_unit = NULL;
 		char buffer[50];
 		for(int i = 0; i < SUANG_FILE_COUNT; i++)
