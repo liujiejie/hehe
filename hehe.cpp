@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	
 	for(int i = 0; i < 10; i++)
 	{
-		std::cout<<"TongJi"<<std::endl;
+		
 		S_suang data;
 		GetOneShuang(data);
 		data.Print();

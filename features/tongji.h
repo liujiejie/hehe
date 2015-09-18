@@ -47,7 +47,7 @@ public:
 			
 			tong_ji_red_ptr = new S_TongJi;
 			tong_ji_red_ptr->date_ = 0;
-			behavior_list_[i]->AddedShuangBehavior(20030101, 20200101, LoadData::Suang_, 0, 6, 32);
+			behavior_list_[i]->AddedShuangBehavior(20030101, 20200101, LoadData::Suang_, 0, 6, 34);
 						
 			for(int j = 0; j < red_number_count_ ||
 				behavior_list_[i]->num_value_[j].num_ == behavior_list_[i]->num_value_[red_number_count_].num_; j++)
@@ -60,7 +60,7 @@ public:
 		
 			tong_ji_blue_ptr = new S_TongJi;
 			tong_ji_blue_ptr->date_ = 0;
-			behavior_list_[i]->AddedShuangBehavior(20030101, 20200101, LoadData::Suang_, 6, 7, 16);
+			behavior_list_[i]->AddedShuangBehavior(20030101, 20200101, LoadData::Suang_, 6, 7, 17);
 			for(int j = 0; j < blue_number_count_ ||
 				behavior_list_[i]->num_value_[j].num_ == behavior_list_[i]->num_value_[red_number_count_].num_; j++)
 			{
@@ -75,10 +75,10 @@ public:
 		TongJi tongji_red_all;
 		TongJi tongji_blue_all;
 		
-		tongji_red_all.AddedShuangBehavior(0, 0, tong_ji_red_list, 0, 0, 32);
+		tongji_red_all.AddedShuangBehavior(0, 0, tong_ji_red_list, 0, 0, 34);
 		tongji_red_all.MakeFile(GetFileName(0, 0, 0, 0, 32));
 							 
-		tongji_blue_all.AddedShuangBehavior(0, 0, tong_ji_blue_list, 0, 0, 16);
+		tongji_blue_all.AddedShuangBehavior(0, 0, tong_ji_blue_list, 0, 0, 17);
 		tongji_blue_all.MakeFile(GetFileName(0, 0, 0, 0, 16));
 		
 		std::cout<<"sdfsdf"<<std::endl;
