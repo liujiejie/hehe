@@ -32,6 +32,15 @@ public:
 		
         Decorator::Operation();
 		
+		AddedShuangBehavior(20030101, 20200101, LoadData::Suang_, 0, 6, 34);
+		MakeFile(GetFileName(20030101, 20200101, 0, 6, 34));
+							 
+		AddedShuangBehavior(20030101, 20200101, LoadData::Suang_, 6, 7, 17);
+		MakeFile(GetFileName(20030101, 20200101, 6, 7, 17));
+		
+		
+		
+		
 		red_number_count_ = 8;
 		blue_number_count_ = 3;		
 		
@@ -76,12 +85,10 @@ public:
 		TongJi tongji_blue_all;
 		
 		tongji_red_all.AddedShuangBehavior(0, 0, tong_ji_red_list, 0, 0, 34);
-		tongji_red_all.MakeFile(GetFileName(0, 0, 0, 0, 32));
+		tongji_red_all.MakeFile(GetFileName(0, 0, 0, 0, 34));
 							 
 		tongji_blue_all.AddedShuangBehavior(0, 0, tong_ji_blue_list, 0, 0, 17);
-		tongji_blue_all.MakeFile(GetFileName(0, 0, 0, 0, 16));
-		
-		std::cout<<"sdfsdf"<<std::endl;
+		tongji_blue_all.MakeFile(GetFileName(0, 0, 0, 0, 17));
 						 
 		for(int i = 0; i < tong_ji_red_list.size(); i++)
 		{
