@@ -5,12 +5,19 @@
 #include <vector>
 #include <string.h>
 #include <stdlib.h>
+#include <algorithm>
+#include <cmath>
 
 #include "struct.h"
 #include "file_path.h"
 
 namespace hehe
 {
+
+inline bool sort_by_distance2(const S_suang* obj1, const S_suang* obj2) 
+{
+    return obj1->number_ < obj2->number_ ;
+}
 
 class LoadData
 {
@@ -60,6 +67,8 @@ public:
 			
 			in.close();
 		}
+		
+		sort(Suang_.begin(), Suang_.end(), sort_by_distance2);
 		return Suang_.size();
 	};
 	static long LoadDa()
